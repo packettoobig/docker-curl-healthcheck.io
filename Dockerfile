@@ -8,7 +8,7 @@ ENV CURL_TIMEOUT=5
 ENV CURL_MAXTIME=10
 
 RUN apk update \
-    && apk add --no-cache curl \
+    && apk add --no-cache ca-certificates curl \
     && rm -rf /var/cache/apk/*
 
 COPY entrypoint.sh /
